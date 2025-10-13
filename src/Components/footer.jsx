@@ -12,11 +12,11 @@ const Footer = () => {
           <div className="space-y-4">
             <div className="flex items-center space-x-3">
               <img 
-                src='/logo.jpg' 
+                src={`${process.env.PUBLIC_URL}/logo.jpg`} 
                 alt='DEVOTED' 
                 className="h-12 w-12 rounded-lg object-cover"
               />
-              <span className="text-2xl font-bold">DEVOTED</span>
+              {/* <span className="text-2xl font-bold">DEVOTED</span> */}
             </div>
             <p className="text-gray-400 text-sm leading-relaxed">
               Crafting exceptional dairy-free ice cream that redefines what plant-based desserts can be.
