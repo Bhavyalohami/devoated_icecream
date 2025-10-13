@@ -96,7 +96,7 @@ const Header = () => {
             whileHover={{ scale: 1.05 }}
           >
             <img 
-              src='/logo.jpg' 
+              src={`${process.env.PUBLIC_URL}/logo.jpg`} 
               alt='DEVOTED' 
               className={`transition-all duration-500 ${
                 isScrolled ? 'h-12 w-12' : 'h-16 w-16'
