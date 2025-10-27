@@ -157,9 +157,9 @@ const Footer = () => {
           <div className="space-y-4">
             <div className="flex items-center space-x-3">
               <img 
-                src={`${process.env.PUBLIC_URL}/logo.jpg`} 
+                src={`${process.env.PUBLIC_URL}/logo.png`} 
                 alt='DEVOATED' 
-                className="h-12 w-12 rounded-lg object-cover border-2 border-white"
+                className="h-20 w-20 rounded-lg object-cover"
               />
             </div>
             <p className="text-gray-400 text-sm leading-relaxed">

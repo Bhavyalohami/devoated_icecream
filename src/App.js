@@ -22,20 +22,20 @@ const PageContent = () => {
   };
 
     const heroImages = [
-    `${process.env.PUBLIC_URL}/Images/Hero_Images/General.jpg`,
-    "/images/hero-icecream-2.jpg", 
-    "/images/hero-icecream-3.jpg"
+    `${process.env.PUBLIC_URL}/Images/Hero_Images/image3.jpg`,
+    `${process.env.PUBLIC_URL}/Images/Hero_Images/image1.jpg`, 
+    `${process.env.PUBLIC_URL}/Images/Hero_Images/image2.jpg`
   ];
   const flavorGroups = 
     // First carousel - 7 flavors
     [
       {
-        name: "Whisky Vanilla Brownie",
+        name: "Vanilla Bourbon Brownie",
         description:
           "Kentucky bourbon-fueled vanilla —with notes of butterscotch and honey—laden with chewy brownie bits.",
         price: "$12.00",
         category: "Signature",
-        image: "/images/whisky-vanilla.jpg"
+        image: `${process.env.PUBLIC_URL}/Images/Flavors/Vanilla Bourbon Brownie.png`
       },
       {
         name: "Mint & Fudge Crunch",
@@ -43,7 +43,7 @@ const PageContent = () => {
           "Classic mint gelato loaded with chocolate chunks and luscious fudge swirls.",
         price: "$12.00",
         category: "Classic",
-        image: "/images/mint-fudge.jpg"
+        image: `${process.env.PUBLIC_URL}/Images/Flavors/Fudge Crunch.png`
       },
       {
         name: "Coffee Chocolate Chunk",
@@ -51,7 +51,7 @@ const PageContent = () => {
           "Bold cold brewed coffee studded with hunks of bittersweet chocolate chunks.",
         price: "$12.00",
         category: "Coffee",
-        image: "/images/coffee-chocolate.jpg"
+        image: `${process.env.PUBLIC_URL}/Images/Flavors/Coffee Chocolate Chunk.png`
       },
       {
         name: "Raspberry Ripple Cookie Fudge",
@@ -59,7 +59,7 @@ const PageContent = () => {
           "Raspberry-infused vanilla with chocolate cookies and rich fudge swirls—a pink, indulgent delight.",
         price: "$12.00",
         category: "Fruity",
-        image: "/images/raspberry-ripple.jpg"
+        image: `${process.env.PUBLIC_URL}/Images/Flavors/black raspberry.png`
       },
       {
         name: "Chocolate Peanut Butter Brownie",
@@ -67,31 +67,31 @@ const PageContent = () => {
           "Rich chocolate swirled with creamy peanut butter and chunks of vegan brownie bliss.",
         price: "$12.00",
         category: "Chocolate",
-        image: "/images/chocolate-pb.jpg"
+        image: `${process.env.PUBLIC_URL}/Images/Flavors/Chocolate Peanut Butter Brownie.png`
       },
-      {
-        name: "Cinnamon Toast Crunch",
-        description:
-          "Warm cinnamon-spiced vanilla with crunchy vanilla cookie pieces—like your favorite cozy breakfast in a scoop.",
-        price: "$12.00",
-        category: "Seasonal",
-        image: "/images/cinnamon-toast.jpg"
-      },
+      // {
+      //   name: "Cinnamon Toast Crunch",
+      //   description:
+      //     "Warm cinnamon-spiced vanilla with crunchy vanilla cookie pieces—like your favorite cozy breakfast in a scoop.",
+      //   price: "$12.00",
+      //   category: "Seasonal",
+      //   image: "/images/cinnamon-toast.jpg"
+      // },
       {
         name: "Cookies & Cream",
         description:
           "Rich vanilla cream and dark chocolate cookies. Nothing will make you happier.",
         price: "$12.00",
         category: "Classic",
-        image: "/images/cookies-cream.jpg"
+        image: `${process.env.PUBLIC_URL}/Images/Flavors/cookies and cream.png`
       },
       {
-        name: "Peppermint Fudge Chunk",
+        name: "Mango Coconut",
         description:
-          "Bright, creamy green mint with dark chocolate chunks and decadent fudge ribbons—classic and irresistible.",
+          "Creamy coconut milk meets tangy sweet mango in this tango of flavors.",
         price: "$12.00",
-        category: "Mint",
-        image: "/images/peppermint-fudge.jpg"
+        category: "Seasonal",
+        image: `${process.env.PUBLIC_URL}/Images/Flavors/Mango Coconut.png`
       },
       {
         name: "Coffee Affogato Caramel Swirl",
@@ -99,14 +99,14 @@ const PageContent = () => {
           "Velvety coffee cream intertwined with soft caramel ribbons— a café classic reimagined.",
         price: "$12.00",
         category: "Coffee",
-        image: "/images/coffee-affogato.jpg"
+        image: `${process.env.PUBLIC_URL}/Images/Flavors/Coffee Affogato Caramel Swirl.png`
       },
       {
         name: "Chocolate, Chocolate Chunk",
         description: "A classic and indulgent double chocolate threat.",
         price: "$12.00",
         category: "Chocolate",
-        image: "/images/double-chocolate.jpg"
+        image: `${process.env.PUBLIC_URL}/Images/Flavors/Chocolate, Chocolate Chunk.png`
       },
       {
         name: "Cinnamon Cookie Crunch",
@@ -114,7 +114,7 @@ const PageContent = () => {
           "Velvety vanilla cream with cinnamon spice and crisp vanilla cookie chunks.",
         price: "$12.00",
         category: "Seasonal",
-        image: "/images/cinnamon-cookie.jpg"
+        image: `${process.env.PUBLIC_URL}/Images/Flavors/Cinnamon Cookie Crunch.png`
       },
       {
         name: "Raspberry & Fudge Crunch",
@@ -122,15 +122,15 @@ const PageContent = () => {
           "Bright raspberry-kissed vanilla with chewy gluten-free chocolate cookies and decadent fudge ribbons.",
         price: "$12.00",
         category: "Fruity",
-        image: "/images/raspberry-fudge.jpg"
+        image: `${process.env.PUBLIC_URL}/Images/Flavors/Fudge Crunch.png`
       },
       {
-        name: "Brownie Batter & Peanut Butter Swirl",
+        name: "Mango Cream",
         description:
-          "Lush chocolate with peanut butter ribbons and bites of fudgy brownie.",
+          "Just as it sounds. A whole mango and a glass of oat milk.",
         price: "$12.00",
-        category: "Chocolate",
-        image: "/images/brownie-batter.jpg"
+        category: "Seasonal",
+        image: `${process.env.PUBLIC_URL}/Images/Flavors/mango cream.png`
       },
       {
         name: "Chocolate Caramel Cookie Crunch",
@@ -138,7 +138,7 @@ const PageContent = () => {
           "Chocolate cream with ribbons of caramel and chunks of vanilla cookies.",
         price: "$12.00",
         category: "Chocolate",
-        image: "/images/caramel-cookie.jpg"
+        image: `${process.env.PUBLIC_URL}/Images/Flavors/Chocolate Caramel Cookie Crunch.png`
       },
     ];
 
@@ -330,30 +330,30 @@ const PageContent = () => {
             </motion.p>
           </div>
 
-          <div className="grid grid-cols-4 gap-4">
+          <div className="grid grid-cols-5 gap-3">
                           {flavorGroups.map((flavor, index) => (
                             <motion.div
                               key={`${index}`}
-                              className="flavor-card bg-white rounded-xl shadow-lg border-2 border-black p-4 md:p-6 h-96 flex flex-col justify-between transition-all duration-300 hover:shadow-2xl hover:-translate-y-2"
+                              className="flavor-card bg-white rounded-xl shadow-lg border-2 border-black p-4 md:p-6 h-[500px] flex flex-col justify-between transition-all duration-300 hover:shadow-2xl hover:-translate-y-2"
                               whileHover={{ scale: 1.02 }}
                               transition={{ type: "spring", stiffness: 300 }}
                             >
                               {/* Image Section */}
-                              <div className="relative h-40 mb-4 rounded-lg overflow-hidden bg-gradient-to-br from-gray-200 to-gray-300 flex items-center justify-center">
+                              <div className="relative h-56 mb-4 rounded-lg overflow-hidden bg-gradient-to-br from-gray-200 to-gray-300 flex items-center justify-center">
                                 {/* Placeholder for actual image - replace with <img> tag when you have images */}
-                                <div className="text-4xl text-gray-500">
+                                {/* <div className="text-4xl text-gray-500">
                                   {flavor.category === 'Chocolate' ? '🍫' : 
                                    flavor.category === 'Coffee' ? '☕' :
                                    flavor.category === 'Fruity' ? '🍓' :
                                    flavor.category === 'Mint' ? '🌿' :
                                    flavor.category === 'Seasonal' ? '🎄' : '🍦'}
-                                </div>
+                                </div> */}
                                 {/* Uncomment below when you have actual images */}
-                                {/* <img 
+                                <img 
                                   src={flavor.image} 
                                   alt={flavor.name}
-                                  className="w-full h-full object-cover"
-                                /> */}
+                                  className="w-full h-full object-cober"
+                                />
                               </div>
             
                               {/* Category Badge */}
@@ -369,7 +369,7 @@ const PageContent = () => {
                               </h4>
             
                               {/* Description */}
-                              <p className="text-gray-600 text-xs md:text-sm leading-relaxed flex-grow mb-3 md:mb-4 line-clamp-2">
+                              <p className="text-gray-600 text-xs md:text-sm leading-relaxed flex-grow mb-3 md:mb-4">
                                 {flavor.description}
                               </p>
             
