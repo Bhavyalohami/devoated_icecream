@@ -330,11 +330,11 @@ const PageContent = () => {
             </motion.p>
           </div>
 
-          <div className="grid grid-cols-5 gap-3">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-3">
                           {flavorGroups.map((flavor, index) => (
                             <motion.div
                               key={`${index}`}
-                              className="flavor-card bg-white rounded-xl shadow-lg border-2 border-black p-4 md:p-6 h-[500px] flex flex-col justify-between transition-all duration-300 hover:shadow-2xl hover:-translate-y-2"
+                              className="flavor-card bg-white rounded-xl shadow-lg border-2 border-black p-4 md:p-6 h-[450px] xl:h-[500px] flex flex-col justify-between transition-all duration-300 hover:shadow-2xl hover:-translate-y-2"
                               whileHover={{ scale: 1.02 }}
                               transition={{ type: "spring", stiffness: 300 }}
                             >
