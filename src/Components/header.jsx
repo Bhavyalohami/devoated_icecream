@@ -57,41 +57,18 @@ const Header = () => {
     <motion.header 
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         isScrolled 
-          ? 'bg-white py-4 shadow-lg border-b-2 border-black' 
+          ? 'bg-[#d64972] py-4 shadow-lg border-b-2 border-white' 
           : 'bg-transparent py-6'
       }`}
       initial="hidden"
       animate="visible"
       variants={containerVariants}
     >
-      <div className="container mx-auto px-6">
+      <div className="container mx-auto px-4 md:px-6 lg:px-8">
         <div className="flex items-center justify-between">
-          {/* Left Navigation */}
-          <motion.nav 
-            className="hidden lg:flex items-center space-x-8 w-full justify-center"
-            variants={containerVariants}
-          >
-            {[ 'Flavors', 'Locations'].map((item) => (
-              <motion.a
-                key={item}
-                href={`#${item.toLowerCase().replace(' ', '-')}`}
-                className={`font-medium transition-all duration-300 relative group ${
-                  isScrolled ? 'text-black' : 'text-white'
-                }`}
-                variants={itemVariants}
-                whileHover={{ scale: 1.05 }}
-              >
-                {item}
-                <span className={`absolute -bottom-1 left-0 w-0 h-0.5 group-hover:w-full transition-all duration-300 ${
-                  isScrolled ? 'bg-[#d64972]' : 'bg-[#c8d34a]'
-                }`} />
-              </motion.a>
-            ))}
-          </motion.nav>
 
-          {/* Centered Logo */}
-          <motion.div 
-            className="flex items-center justify-center lg:w-full"
+            <motion.div 
+            className="flex items-center justify-start lg:w-full"
             variants={itemVariants}
             whileHover={{ scale: 1.05 }}
           >
@@ -99,13 +76,38 @@ const Header = () => {
               src={`${process.env.PUBLIC_URL}/logo.png`} 
               alt='DEVOTED' 
               className={`transition-all duration-500 ${
-                isScrolled ? 'h-16 w-16' : 'h-20 w-20'
+                isScrolled ? 'h-20 w-20' : 'h-24 w-24'
               }`}
             />
           </motion.div>
+          {/* Left Navigation */}
+          <motion.nav 
+            className="hidden lg:flex items-center space-x-8 w-full justify-end"
+            variants={containerVariants}
+          >
+            {[ 'Hard Pack Gelato', 'Sorbet', 'Soft Serve', 'Açaí', 'Ingredients', 'About Us'].map((item) => (
+              <motion.a
+                key={item}
+                href={`#${item.toLowerCase().replace(' ', '-')}`}
+                className={`font-medium transition-all duration-300 relative group ${
+                  isScrolled ? 'text-white' : 'text-white'
+                }`}
+                variants={itemVariants}
+                whileHover={{ scale: 1.05 }}
+              >
+                {item}
+                <span className={`absolute -bottom-1 left-0 w-0 h-0.5 group-hover:w-full transition-all duration-300 ${
+                  isScrolled ? 'bg-[#c8d34a]' : 'bg-[#d64972]'
+                }`} />
+              </motion.a>
+            ))}
+          </motion.nav>
+
+          {/* Centered Logo */}
+        
 
           {/* Right Navigation */}
-          <motion.div 
+          {/* <motion.div 
             className="hidden lg:flex items-center space-x-8 w-full justify-center"
             variants={containerVariants}
           >
@@ -125,7 +127,7 @@ const Header = () => {
                 }`} />
               </motion.a>
             ))}
-          </motion.div>
+          </motion.div> */}
 
           {/* Mobile Menu Button */}
           <motion.button
