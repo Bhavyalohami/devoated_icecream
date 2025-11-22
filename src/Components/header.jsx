@@ -57,7 +57,7 @@ const Header = () => {
     <motion.header 
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         isScrolled 
-          ? 'bg-[#d64972] py-4 shadow-lg border-b-2 border-white' 
+          ? 'bg-[#FF29A3] pt-4 lg:py-4 shadow-lg border-b-2 border-white' 
           : 'bg-transparent py-6'
       }`}
       initial="hidden"
@@ -70,19 +70,19 @@ const Header = () => {
             <motion.div 
             className="flex items-center justify-start lg:w-full"
             variants={itemVariants}
-            whileHover={{ scale: 1.05 }}
+            // whileHover={{ scale: 1.05 }}
           >
             <img 
               src={`${process.env.PUBLIC_URL}/logo.png`} 
               alt='DEVOTED' 
               className={`transition-all duration-500 ${
-                isScrolled ? 'h-20 w-20' : 'h-24 w-24'
+                isScrolled ? 'h-20 w-20' : 'h-32 w-32'
               }`}
             />
           </motion.div>
           {/* Left Navigation */}
           <motion.nav 
-            className="hidden lg:flex items-center space-x-8 w-full justify-end"
+            className={`hidden lg:flex items-center w-full justify-end ${isScrolled ? 'space-x-8' : 'space-x-4'}`}
             variants={containerVariants}
           >
             {[ 'Hard Pack Gelato', 'Sorbet', 'Soft Serve', 'Açaí', 'Ingredients', 'About Us' ].map((item) => (
@@ -90,15 +90,17 @@ const Header = () => {
                 key={item}
                 href={`#${item.toLowerCase().replace(' ', '-')}`}
                 className={`font-medium transition-all duration-300 relative group ${
-                  isScrolled ? 'text-white' : 'text-white'
+                  isScrolled ? 'text-white' : 'text-white bg-[#FF29A3] hover:bg-black px-3 py-1.5 rounded-full'
                 }`}
                 variants={itemVariants}
                 whileHover={{ scale: 1.05 }}
               >
                 {item}
+                {isScrolled && (
                 <span className={`absolute -bottom-1 left-0 w-0 h-0.5 group-hover:w-full transition-all duration-300 ${
-                  isScrolled ? 'bg-[#c8d34a]' : 'bg-[#d64972]'
+                  isScrolled ? 'bg-[#c8d34a]' : 'bg-[#FF29A3]'
                 }`} />
+                )}
               </motion.a>
             ))}
           </motion.nav>
@@ -123,7 +125,7 @@ const Header = () => {
               >
                 {item}
                 <span className={`absolute -bottom-1 left-0 w-0 h-0.5 group-hover:w-full transition-all duration-300 ${
-                  isScrolled ? 'bg-[#d64972]' : 'bg-[#c8d34a]'
+                  isScrolled ? 'bg-[#FF29A3]' : 'bg-[#c8d34a]'
                 }`} />
               </motion.a>
             ))}

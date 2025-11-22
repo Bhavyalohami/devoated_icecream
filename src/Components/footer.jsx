@@ -149,11 +149,10 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-black text-white border-t-4 border-[#d64972]">
+    <footer className="bg-black text-white">
       {/* Main Footer */}
-      <div className="container mx-auto px-6 pt-16 pb-8">
+      {/* <div className="container mx-auto px-6 pt-16 pb-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {/* Brand Column */}
           <div className="space-y-4">
             <div className="flex items-center space-x-3">
               <img 
@@ -178,7 +177,6 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Quick Links */}
           <div className="space-y-4">
             <h4 className="text-lg font-semibold text-white">Explore</h4>
             <ul className="space-y-2">
@@ -195,7 +193,6 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Contact & Support */}
           <div className="space-y-4">
             <h4 className="text-lg font-semibold text-white">Get in Touch</h4>
             <div className="space-y-2 text-gray-400">
@@ -219,13 +216,12 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Allergen Notice */}
         <div className="mt-12 pt-8 border-t border-gray-800 text-center">
           <p className="text-gray-400 text-sm">
             © {currentYear} DEVOTED. All rights reserved.
           </p>
         </div>
-      </div>
+      </div> */}
 
       {/* Bottom Bar */}
       {/* <div className="border-t border-gray-800">
@@ -250,16 +246,16 @@ const Footer = () => {
       </div> */}
 
       {/* Mission Statement Banner */}
-      <div className="bg-[#c8d34a] py-8 border-t-4 border-[#d64972]">
+      <div className="bg-black py-12">
         <div className="container mx-auto px-6 text-center">
           <motion.p 
-            className="text-black font-bold text-xl md:text-2xl"
+            className="text-white font-light text-3xl tracking-wide"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            We make dairy-free ice cream that ends dessert FOMO for good.
+            Devoted: Ending dessert FOMO for good
           </motion.p>
         </div>
       </div>

@@ -11,7 +11,7 @@
 // const PageContent = () => {
 //   const getCategoryColor = (category) => {
 //     const colors = {
-//       'Signature': 'bg-[#d64972] text-white',
+//       'Signature': 'bg-[#FF29A3] text-white',
 //       'Classic': 'bg-black text-white',
 //       'Coffee': 'bg-amber-900 text-white',
 //       'Fruity': 'bg-pink-600 text-white',
@@ -263,7 +263,7 @@
 //             animate={{ opacity: 1, y: 0 }}
 //             transition={{ duration: 1, delay: 0.6 }}
 //           >
-//             <button className="bg-[#c8d34a] text-black px-8 py-4 rounded-full font-bold text-lg hover:bg-[#d64972] hover:text-white transition-all duration-300 transform hover:scale-105 border-2 border-transparent">
+//             <button className="bg-[#c8d34a] text-black px-8 py-4 rounded-full font-bold text-lg hover:bg-[#FF29A3] hover:text-white transition-all duration-300 transform hover:scale-105 border-2 border-transparent">
 //               Get In Touch
 //             </button>
 //           </motion.div>
@@ -489,7 +489,7 @@
 //               viewport={{ once: true }}
 //             >
 //               <div className="bg-gradient-to-br from-black to-gray-800 h-96 rounded-2xl transform -rotate-3"></div>
-//               <div className="absolute inset-0 bg-gradient-to-br from-[#c8d34a] to-[#d64972] rounded-2xl transform rotate-3 shadow-xl flex items-center justify-center">
+//               <div className="absolute inset-0 bg-gradient-to-br from-[#c8d34a] to-[#FF29A3] rounded-2xl transform rotate-3 shadow-xl flex items-center justify-center">
 //                 <div className="text-center text-white">
 //                   <div className="text-6xl mb-4">🍦</div>
 //                   <p className="text-lg font-semibold">
@@ -586,7 +586,7 @@
 //               They want real scoops, not sad substitutions.
 //             </p>
 
-//             <div className="text-3xl md:text-4xl font-bold text-[#d64972] mb-6">
+//             <div className="text-3xl md:text-4xl font-bold text-[#FF29A3] mb-6">
 //               Devoted² = More fans + More sales – Dairy
 //             </div>
 
@@ -643,7 +643,7 @@
 //           >
 //             <a
 //               href="mailto:dan@getdevoated.com"
-//               className="bg-[#c8d34a] text-black px-8 py-4 rounded-full font-bold text-lg hover:bg-[#d64972] hover:text-white transition-all duration-300 transform hover:scale-105 border-2 border-transparent"
+//               className="bg-[#c8d34a] text-black px-8 py-4 rounded-full font-bold text-lg hover:bg-[#FF29A3] hover:text-white transition-all duration-300 transform hover:scale-105 border-2 border-transparent"
 //             >
 //               dan@getdevoated.com
 //             </a>
@@ -689,12 +689,12 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, EffectFade } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/effect-fade";
-import { FaFileDownload } from "react-icons/fa";
+import { FaFileDownload, FaLongArrowAltDown } from "react-icons/fa";
 
 const PageContent = () => {
   const getCategoryColor = (category) => {
     const colors = {
-      Signature: "bg-[#d64972] text-white",
+      Signature: "bg-[#FF29A3] text-white",
       Classic: "bg-black text-white",
       Coffee: "bg-amber-900 text-white",
       Fruity: "bg-pink-600 text-white",
@@ -707,8 +707,8 @@ const PageContent = () => {
   };
 
   const heroImages = [
-    `${process.env.PUBLIC_URL}/Images/Hero_Images/image3.jpg`,
     `${process.env.PUBLIC_URL}/Images/Hero_Images/image1.jpg`,
+    `${process.env.PUBLIC_URL}/Images/Hero_Images/image3.jpg`,
     `${process.env.PUBLIC_URL}/Images/Hero_Images/image2.jpg`,
   ];
 
@@ -902,12 +902,12 @@ const PageContent = () => {
             ))}
           </Swiper>
 
-          <div className="absolute inset-0 bg-black/50 z-10"></div>
+          {/* <div className="absolute inset-0 bg-black/50 z-10"></div> */}
         </div>
 
-        <div className="relative text-center text-white px-6 max-w-5xl z-20">
+        <div className="relative text-center flex flex-col items-center justify-center text-white px-6 z-20">
           <motion.h1
-            className="text-5xl md:text-7xl font-bold mb-6 tracking-tight"
+            className="text-5xl md:text-7xl max-w-2xl text-[#FF29A3] font-bold mb-6 tracking-tight"
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
@@ -915,21 +915,20 @@ const PageContent = () => {
             THE CREAM OF THE DAIRY-FREE CROP
           </motion.h1>
           <motion.p
-            className="text-xl md:text-2xl mb-8 leading-relaxed font-light text-gray-200 max-w-3xl mx-auto"
+            className="text-xl md:text-2xl mb-8 leading-relaxed text-gray-200 mx-auto"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.3 }}
           >
-            Devoted is your one-stop shop for all things non-dairy — crafting
-            premium hard-pack gelato, sorbet, and soft-serve mixes, plus
-            ultra-premium açaí for bowls and smoothies.
+            Your one-stop shop for non-dairy indulgence: gelato, sorbet,
+            soft-serve mixes, and açaí bowls
           </motion.p>
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.6 }}
           >
-            <button className="bg-[#c8d34a] text-black px-8 py-4 rounded-full font-bold text-lg hover:bg-[#d64972] hover:text-white transition-all duration-300 transform hover:scale-105 border-2 border-transparent">
+            <button className="bg-white text-black px-8 py-4 rounded-full font-bold text-lg hover:bg-[#FF29A3] hover:text-white transition-all duration-300 transform hover:scale-105 border-2 border-transparent">
               Get In Touch
             </button>
           </motion.div>
@@ -937,9 +936,9 @@ const PageContent = () => {
       </section>
 
       {/* Premium Statement Section */}
-      <section className="py-20 bg-white">
+      <section  className="py-20 bg-white">
         <div className="container mx-auto px-6">
-          <div className="flex flex-col lg:flex-row items-center justify-center gap-12 max-w-6xl mx-auto">
+          <div className="flex flex-col lg:flex-row items-center justify-center gap-6 max-w-6xl mx-auto">
             <motion.div
               initial={{ opacity: 0, x: -50 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -962,9 +961,9 @@ const PageContent = () => {
               viewport={{ once: true }}
             >
               <h2 className="text-3xl md:text-4xl font-bold text-[#FF29A3] mb-4">
-                The Cream Of The Dairy-Free Crop
+                We didn't just copy ice cream we reinvented it
               </h2>
-              <p className="text-lg md:text-xl text-gray-700 mb-4">
+              <p className="text-lg md:text-xl tracking-wide font-medium text-gray-700 mb-4">
                 The only dairy-free ice cream that rivals real cream — silky,
                 rich, and indulgent.
               </p>
@@ -977,7 +976,7 @@ const PageContent = () => {
       </section>
 
       {/* Flavors Section with Background Image */}
-      <section id="flavors" className="py-20 relative min-h-screen">
+      <section id="hard-pack gelato" className="py-20 relative min-h-screen">
         {/* Background Image */}
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
@@ -1070,7 +1069,7 @@ const PageContent = () => {
       </section>
 
       {/* Sorbets Section */}
-      <section id="sorbets" className="py-20 relative min-h-screen mt-24">
+      <section id="sorbet" className="py-20 relative min-h-screen mt-24">
         {/* Background Image */}
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
@@ -1158,69 +1157,63 @@ const PageContent = () => {
         {/* Content */}
         <div className="container mx-auto px-6 relative z-10">
           {/* Sorbets Header */}
-          <div className="text-center mb-12">
+          <div className="text-center mb-6">
             <motion.h2
-              className="text-4xl md:text-5xl font-bold text-[#FF29A3] mb-4"
+              className="text-3xl md:text-4xl font-bold text-[#FF29A3] mb-4 uppercase"
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              Soft Serve
+              Wholesale Soft-Serve Mix
             </motion.h2>
           </div>
 
           {/* Sorbets Grid */}
           <div className="flex flex-col mb-10 items-center justify-center">
             <motion.p
-              className="text-xl md:text-2xl mb-8 text-center leading-relaxed font-light text-gray-200 max-w-[45rem] mx-auto"
+              className="text-xl mb-4 text-center leading-relaxed  text-gray-200 max-w-[44rem] mx-auto"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, delay: 0.3 }}
             >
-              Let’s be real—most vegan soft serve doesn’t hit. Ours does. It’s
-              creamy, rich, and straight-up fire, with the perfect dairy-like
-              melt and swirl.{" "}
+             Most dairy free soft-serve doesn't hit it. ours does. It’s creamy, rich, and straight-up fire, with the perfect dairy-like melt and swirl. 
             </motion.p>
             <motion.p
-              className="text-xl md:text-2xl mb-8 text-center leading-relaxed font-light text-gray-200 max-w-[45rem] mx-auto"
+              className="text-xl mb-8 text-center leading-relaxed  text-gray-200 max-w-[45rem] mx-auto"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, delay: 0.3 }}
             >
-              Works perfectly for soft serve, hard-pack and milkshakes – Runs on
-              Taylor, Stoelting, ElectroFreeze, and other machines – Performance
-              not hindered by added pasteurization cycles within machine – Shelf
-              Life: 365days frozen; use within 14 days after thawing. 2/2.5
-              gallon tubs
+              Works perfectly for soft serve, hard-pack and milkshakes
             </motion.p>
-            <button className=" text-white bg-[#FF29A3] w-fit py-2 px-8 rounded-full mt-4">
+            <button className=" text-white bg-[#FF29A3] w-fit py-2 px-8 rounded-full my-4">
               <div className="flex items-center justify-center gap-3">
                 <FaFileDownload className="text-3xl" />
                 <div className="flex flex-col text-center">
-                  <p className="font-bold text-lg">
+                  <p className=" text-base">
                     Download Chocolate & Vanila
                   </p>
-                  <p className="font-bold text-lg">Soft Serve Spec Sheet</p>
+                  <p className=" text-base">Soft Serve Spec Sheet</p>
                 </div>
               </div>
             </button>
             <motion.p
-              className="text-xl md:text-2xl !font-bold mt-6 text-center leading-relaxed text-gray-200 max-w-[45rem] mx-auto"
+              className="text-xl mt-6 text-center leading-relaxed text-gray-200 max-w-[40rem] mx-auto"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, delay: 0.3 }}
             >
-              Packed 2/2.5 GAL
+              Runs on Taylor, Stoelting, ElectroFreeze, and other machines –  Performance not hindered by added pasteurization cycles within  machine – Shelf Life: 365days frozen; use within 14 days after thawing.  2/2.5 gallon tubs
             </motion.p>
           </div>
         </div>
       </section>
 
-            <section id="acai-bowl" className="py-20 relative min-h-[400px] mt-24">
+      <section id="açaí" className="py-20 relative min-h-[450px] mt-24">
         {/* Background Image */}
         <div
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          className="absolute inset-0 bg-cover w-full bg-center bg-no-repeat"
           style={{
             backgroundImage: `url(${process.env.PUBLIC_URL}/Images/Acai-Bowl/acai-and-smoothies-background_08.jpg)`,
           }}
@@ -1247,28 +1240,28 @@ const PageContent = () => {
           {/* Sorbets Grid */}
           <div className="flex flex-col mb-10 items-center justify-center">
             <motion.p
-              className="text-xl md:text-2xl mb-8 text-center leading-relaxed font-light text-gray-200 max-w-[45rem] mx-auto"
+              className="text-xl mb-6 text-center leading-relaxed  text-gray-200 max-w-[44rem] mx-auto"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, delay: 0.3 }}
             >
-             Made from pure, peak-harvest açaí for bold color, deep berry flavor, and natural antioxidants — never diluted or overly sweetened.  
+              Made from pure, peak-harvest açaí for bold color, deep berry
+              flavor, and natural antioxidants — never diluted or overly
+              sweetened.
             </motion.p>
             <motion.p
-              className="text-xl md:text-2xl mb-8 text-center leading-relaxed font-light text-gray-200 max-w-[45rem] mx-auto"
+              className="text-xl mb-6 text-center leading-relaxed text-gray-200 max-w-[45rem] mx-auto"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, delay: 0.3 }}
             >
-             The perfect start to blend with your creation.
+              The perfect start to blend with your creation.
             </motion.p>
             <button className=" text-white bg-[#FF29A3] w-fit py-2 px-8 rounded-full mt-4">
               <div className="flex items-center justify-center gap-3">
                 <FaFileDownload className="text-3xl" />
                 <div className="flex flex-col text-center">
-                  <p className="font-bold text-lg">
-                    Download Açaí Spec Sheet
-                  </p>
+                  <p className="font-bold text-lg">Download Açaí Spec Sheet</p>
                   {/* <p className="font-bold text-lg">Soft Serve Spec Sheet</p> */}
                 </div>
               </div>
@@ -1286,7 +1279,7 @@ const PageContent = () => {
       </section>
 
       {/* Business Math Section */}
-      <section className="py-20 bg-gradient-to-br from-gray-100 to-gray-200">
+      {/* <section className="py-20 bg-gradient-to-br from-gray-100 to-gray-200">
         <div className="container mx-auto px-6 text-center">
           <motion.h2
             className="text-4xl md:text-5xl font-bold text-black mb-8"
@@ -1311,7 +1304,7 @@ const PageContent = () => {
               substitutions.
             </p>
 
-            <div className="text-3xl md:text-4xl font-bold text-[#d64972] mb-6">
+            <div className="text-3xl md:text-4xl font-bold text-[#FF29A3] mb-6">
               Devoted = (More Fans + More Sales) – Dairy
             </div>
 
@@ -1320,7 +1313,6 @@ const PageContent = () => {
             </p>
           </motion.div>
 
-          {/* About Us */}
           <motion.div
             className="mt-16 max-w-4xl mx-auto"
             initial={{ opacity: 0, y: 30 }}
@@ -1337,15 +1329,15 @@ const PageContent = () => {
               From owning factories to running some of the most well-known
               brands in the business, we've got stories worth scooping.
             </p>
-            <div className="bg-[#d64972] text-white p-6 rounded-2xl inline-block">
+            <div className="bg-[#FF29A3] text-white p-6 rounded-2xl inline-block">
               <p className="text-xl font-bold">ENDING DESSERT FOMO FOR GOOD.</p>
             </div>
           </motion.div>
         </div>
-      </section>
+      </section> */}
 
       {/* Contact CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-black to-gray-900 text-white">
+      {/* <section className="py-20 bg-gradient-to-r from-black to-gray-900 text-white">
         <div className="container mx-auto px-6 text-center">
           <motion.h2
             className="text-4xl md:text-5xl font-bold mb-6"
@@ -1375,16 +1367,16 @@ const PageContent = () => {
           >
             <a
               href="mailto:dan@getdevoated.com"
-              className="bg-[#c8d34a] text-black px-8 py-4 rounded-full font-bold text-lg hover:bg-[#d64972] hover:text-white transition-all duration-300 transform hover:scale-105 border-2 border-transparent"
+              className="bg-[#c8d34a] text-black px-8 py-4 rounded-full font-bold text-lg hover:bg-[#FF29A3] hover:text-white transition-all duration-300 transform hover:scale-105 border-2 border-transparent"
             >
               dan@getdevoated.com
             </a>
           </motion.div>
         </div>
-      </section>
+      </section> */}
 
       {/* Final Mission Statement */}
-      <section className="py-16 bg-black text-white border-t-4 border-[#c8d34a]">
+      {/* <section className="py-16 bg-black text-white border-t-4 border-[#c8d34a]">
         <div className="container mx-auto px-6 text-center">
           <motion.p
             className="text-2xl md:text-3xl font-bold text-[#c8d34a]"
@@ -1396,7 +1388,89 @@ const PageContent = () => {
             Never with dairy, gluten, artificial flavors or seed oils.
           </motion.p>
         </div>
-      </section>
+      </section> */}
+
+      {/* From Pros to Pros Section */}
+<section className="py-20 bg-white">
+  <div className="container mx-auto px-6">
+    <div className="max-w-6xl mx-auto">
+      {/* Main Heading */}
+      <motion.div
+      id="ingredients"
+        className="text-center mb-12"
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+        viewport={{ once: true }}
+      >
+        <h2 className="text-4xl md:text-5xl font-bold text-[#FF29A3] mb-8">
+          FROM PROS TO PROS
+        </h2>
+        
+        {/* Math Equation */}
+        <div className="text-3xl md:text-4xl font-medium text-black mb-2">
+          Devoted<sup class="align-super text-xs">3</sup> = (More Fans + More Sales) - Dairy
+        </div>
+        
+        <p className="text-3xl md:text-4xl font-medium text-black mb-10">
+          Now that's the kind of math we like.
+        </p>
+        
+        {/* Description */}
+        <p className="text-lg text-gray-700 max-w-4xl mx-auto leading-relaxed mb-8">
+          From scoop shops to college dining halls and restaurants, our versatile product formats fit seamlessly into
+          any operation. With marketing and merchandising support to boost sell-through, we make it easy to serve
+          something everyone loves.
+        </p>
+        
+        {/* Buttons */}
+        <div className="flex flex-col gap-10 items-center justify-center mb-12">
+          <button className="bg-[#FF29A3] text-white w-fit px-8 py-4 rounded-full font-bold text-lg transition-all duration-300 transform hover:scale-105 border-2 border-transparent">
+            Get in Touch
+          </button>
+          <p className=" text-[#FF29A3] px-8 py-4 rounded-full tracking-wide font-bold text-4xl ">
+            DOWNLOAD NUTRITIONAL INGREDIENTS
+          </p>
+        </div>
+        
+        {/* Icons Section */}
+        <div className="flex justify-center space-x-12 mb-16">
+          <button className="flex items-center text-white !min-w-32 bg-black rounded-full py-3 px-4 justify-center gap-2 text-center">
+            <FaLongArrowAltDown className="text-lg"/>
+            <p className="font-bold text-lg">Scoop Shop</p>
+          </button>
+          <button className="flex items-center text-white !min-w-32 bg-black rounded-full py-3 px-4 gap-2 justify-center text-center">
+            <FaLongArrowAltDown className="text-lg"/>
+            <p className="font-bold text-lg">Soft Serve</p>
+          </button>
+          <button className="flex items-center text-white !min-w-32 bg-black rounded-full py-3 px-4 gap-2 justify-center text-center">
+            <FaLongArrowAltDown className="text-lg"/>
+            <p className="font-bold text-lg">Açaí</p>
+          </button>
+        </div>
+      </motion.div>
+
+      {/* About Us Section */}
+      <motion.div
+      id="about-us"
+        className="text-center"
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, delay: 0.3 }}
+        viewport={{ once: true }}
+      >
+        <h3 className="text-3xl md:text-4xl font-bold text-black mb-8">
+          ABOUT US
+        </h3>
+        <p className="text-lg text-gray-700 max-w-4xl mx-auto leading-relaxed">
+          We don't have some sappy story about starting this business 100 years ago on our great-grandparents' farm
+          — but collectively, we've got 100+ years of ice cream experience. From owning factories to running some of
+          the most well-known brands in the business, we've got stories worth scooping.
+        </p>
+      </motion.div>
+    </div>
+  </div>
+</section>
     </div>
   );
 };
