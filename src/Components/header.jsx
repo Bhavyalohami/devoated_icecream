@@ -76,7 +76,7 @@ const Header = () => {
               src={`${process.env.PUBLIC_URL}/logo.png`} 
               alt='DEVOTED' 
               className={`transition-all duration-500 ${
-                isScrolled ? 'h-20 w-20' : 'h-32 w-32'
+                isScrolled ? 'h-20 w-20' : 'h-24 lg:h-32 w-24 lg:w-32'
               }`}
             />
           </motion.div>

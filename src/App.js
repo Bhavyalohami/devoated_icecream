@@ -1434,7 +1434,7 @@ const PageContent = () => {
         </div>
         
         {/* Icons Section */}
-        <div className="flex justify-center space-x-12 mb-16">
+        <div className="flex flex-col sm:flex-row justify-center gap-4 sm:gap-12 mb-16">
           <button className="flex items-center text-white !min-w-32 bg-black rounded-full py-3 px-4 justify-center gap-2 text-center">
             <FaLongArrowAltDown className="text-lg"/>
             <p className="font-bold text-lg">Scoop Shop</p>
