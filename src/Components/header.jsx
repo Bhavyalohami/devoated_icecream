@@ -89,7 +89,7 @@ const Header = () => {
               <motion.a
                 key={item}
                 href={`#${item.toLowerCase().replace(' ', '-')}`}
-                className={`font-medium transition-all duration-300 relative group ${
+                className={`font-medium transition-all duration-300 text-nowrap relative group ${
                   isScrolled ? 'text-white' : 'text-white bg-[#FF29A3] hover:bg-black px-3 py-1.5 rounded-full'
                 }`}
                 variants={itemVariants}
