@@ -708,8 +708,9 @@ const PageContent = () => {
 
   const heroImages = [
     `${process.env.PUBLIC_URL}/Images/Hero_Images/image1.jpg`,
-    `${process.env.PUBLIC_URL}/Images/Hero_Images/image3.jpg`,
     `${process.env.PUBLIC_URL}/Images/Hero_Images/image2.jpg`,
+
+    `${process.env.PUBLIC_URL}/Images/Hero_Images/image3.jpg`,
   ];
 
   const gelatoFlavors = [
@@ -902,7 +903,7 @@ const PageContent = () => {
             ))}
           </Swiper>
 
-          {/* <div className="absolute inset-0 bg-black/50 z-10"></div> */}
+          <div className="absolute inset-0 bg-black/50 z-10"></div>
         </div>
 
         <div className="relative text-center flex flex-col items-center justify-center text-white px-6 z-20">
@@ -936,7 +937,7 @@ const PageContent = () => {
       </section>
 
       {/* Premium Statement Section */}
-      <section  className="py-20 bg-white">
+      <section className="py-20 bg-white">
         <div className="container mx-auto px-6">
           <div className="flex flex-col lg:flex-row items-center justify-center gap-6 max-w-6xl mx-auto">
             <motion.div
@@ -1061,7 +1062,7 @@ const PageContent = () => {
               <p className="text-lg">
                 Allergen Free. Contains no added Top 10 major Allergens.
                 Produced in a facility that also produces milk, soy, wheat and
-                free nuts
+                tree nuts.
               </p>
             </div>
           </div>
@@ -1177,7 +1178,9 @@ const PageContent = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, delay: 0.3 }}
             >
-             Most dairy free soft-serve doesn't hit it. ours does. It’s creamy, rich, and straight-up fire, with the perfect dairy-like melt and swirl. 
+              Most dairy free soft-serve doesn't hit it. ours does. It’s creamy,
+              rich, and straight-up fire, with the perfect dairy-like melt and
+              swirl.
             </motion.p>
             <motion.p
               className="text-xl mb-8 text-center leading-relaxed  text-gray-200 max-w-[45rem] mx-auto"
@@ -1191,9 +1194,7 @@ const PageContent = () => {
               <div className="flex items-center justify-center gap-3">
                 <FaFileDownload className="text-3xl" />
                 <div className="flex flex-col text-center">
-                  <p className=" text-base">
-                    Download Chocolate & Vanila
-                  </p>
+                  <p className=" text-base">Download Chocolate & Vanila</p>
                   <p className=" text-base">Soft Serve Spec Sheet</p>
                 </div>
               </div>
@@ -1204,7 +1205,10 @@ const PageContent = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, delay: 0.3 }}
             >
-              Runs on Taylor, Stoelting, ElectroFreeze, and other machines –  Performance not hindered by added pasteurization cycles within  machine – Shelf Life: 365days frozen; use within 14 days after thawing.  2/2.5 gallon tubs
+              Runs on Taylor, Stoelting, ElectroFreeze, and other machines –
+              Performance not hindered by added pasteurization cycles within
+              machine – Shelf Life: 365days frozen; use within 14 days after
+              thawing. 2/2.5 gallon tubs
             </motion.p>
           </div>
         </div>
@@ -1391,86 +1395,90 @@ const PageContent = () => {
       </section> */}
 
       {/* From Pros to Pros Section */}
-<section className="py-20 bg-white">
-  <div className="container mx-auto px-6">
-    <div className="max-w-6xl mx-auto">
-      {/* Main Heading */}
-      <motion.div
-      id="ingredients"
-        className="text-center mb-12"
-        initial={{ opacity: 0, y: 50 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
-        viewport={{ once: true }}
-      >
-        <h2 className="text-4xl md:text-5xl font-bold text-[#FF29A3] mb-8">
-          FROM PROS TO PROS
-        </h2>
-        
-        {/* Math Equation */}
-        <div className="text-3xl md:text-4xl font-medium text-black mb-2">
-          Devoted<sup class="align-super text-xs">3</sup> = (More Fans + More Sales) - Dairy
-        </div>
-        
-        <p className="text-3xl md:text-4xl font-medium text-black mb-10">
-          Now that's the kind of math we like.
-        </p>
-        
-        {/* Description */}
-        <p className="text-lg text-gray-700 max-w-4xl mx-auto leading-relaxed mb-8">
-          From scoop shops to college dining halls and restaurants, our versatile product formats fit seamlessly into
-          any operation. With marketing and merchandising support to boost sell-through, we make it easy to serve
-          something everyone loves.
-        </p>
-        
-        {/* Buttons */}
-        <div className="flex flex-col gap-10 items-center justify-center mb-12">
-          <button className="bg-[#FF29A3] text-white w-fit px-8 py-4 rounded-full font-bold text-lg transition-all duration-300 transform hover:scale-105 border-2 border-transparent">
-            Get in Touch
-          </button>
-          <p className=" text-[#FF29A3] px-8 py-4 rounded-full tracking-wide font-bold text-4xl ">
-            DOWNLOAD NUTRITIONAL INGREDIENTS
-          </p>
-        </div>
-        
-        {/* Icons Section */}
-        <div className="flex flex-col sm:flex-row justify-center gap-4 sm:gap-12 mb-16">
-          <button className="flex items-center text-white !min-w-32 bg-black rounded-full py-3 px-4 justify-center gap-2 text-center">
-            <FaLongArrowAltDown className="text-lg"/>
-            <p className="font-bold text-lg">Scoop Shop</p>
-          </button>
-          <button className="flex items-center text-white !min-w-32 bg-black rounded-full py-3 px-4 gap-2 justify-center text-center">
-            <FaLongArrowAltDown className="text-lg"/>
-            <p className="font-bold text-lg">Soft Serve</p>
-          </button>
-          <button className="flex items-center text-white !min-w-32 bg-black rounded-full py-3 px-4 gap-2 justify-center text-center">
-            <FaLongArrowAltDown className="text-lg"/>
-            <p className="font-bold text-lg">Açaí</p>
-          </button>
-        </div>
-      </motion.div>
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-6">
+          <div className="max-w-6xl mx-auto">
+            {/* Main Heading */}
+            <motion.div
+              id="ingredients"
+              className="text-center mb-12"
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+            >
+              <h2 className="text-4xl md:text-5xl font-bold text-[#FF29A3] mb-8">
+                FROM PROS TO PROS
+              </h2>
 
-      {/* About Us Section */}
-      <motion.div
-      id="about-us"
-        className="text-center"
-        initial={{ opacity: 0, y: 50 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, delay: 0.3 }}
-        viewport={{ once: true }}
-      >
-        <h3 className="text-3xl md:text-4xl font-bold text-black mb-8">
-          ABOUT US
-        </h3>
-        <p className="text-lg text-gray-700 max-w-4xl mx-auto leading-relaxed">
-          We don't have some sappy story about starting this business 100 years ago on our great-grandparents' farm
-          — but collectively, we've got 100+ years of ice cream experience. From owning factories to running some of
-          the most well-known brands in the business, we've got stories worth scooping.
-        </p>
-      </motion.div>
-    </div>
-  </div>
-</section>
+              {/* Math Equation */}
+              <div className="text-3xl md:text-4xl font-medium text-black mb-2">
+                Devoted<sup class="align-super text-xs">3</sup> = (More Fans +
+                More Sales) - Dairy
+              </div>
+
+              <p className="text-3xl md:text-4xl font-medium text-black mb-10">
+                Now that's the kind of math we like.
+              </p>
+
+              {/* Description */}
+              <p className="text-lg text-gray-700 max-w-4xl mx-auto leading-relaxed mb-8">
+                From scoop shops to college dining halls and restaurants, our
+                versatile product formats fit seamlessly into any operation.
+                With marketing and merchandising support to boost sell-through,
+                we make it easy to serve something everyone loves.
+              </p>
+
+              {/* Buttons */}
+              <div className="flex flex-col gap-10 items-center justify-center mb-12">
+                <button className="bg-[#FF29A3] text-white w-fit px-8 py-4 rounded-full font-bold text-lg transition-all duration-300 transform hover:scale-105 border-2 border-transparent">
+                  Get in Touch
+                </button>
+                <p className=" text-[#FF29A3] px-8 py-4 rounded-full tracking-wide font-bold text-4xl ">
+                  DOWNLOAD NUTRITIONAL INGREDIENTS
+                </p>
+              </div>
+
+              {/* Icons Section */}
+              <div className="flex flex-col sm:flex-row justify-center gap-4 sm:gap-12 mb-16">
+                <button className="flex items-center text-white !min-w-32 bg-black rounded-full py-3 px-4 justify-center gap-2 text-center">
+                  <FaLongArrowAltDown className="text-lg" />
+                  <p className="font-bold text-lg">Scoop Shop</p>
+                </button>
+                <button className="flex items-center text-white !min-w-32 bg-black rounded-full py-3 px-4 gap-2 justify-center text-center">
+                  <FaLongArrowAltDown className="text-lg" />
+                  <p className="font-bold text-lg">Soft Serve</p>
+                </button>
+                <button className="flex items-center text-white !min-w-32 bg-black rounded-full py-3 px-4 gap-2 justify-center text-center">
+                  <FaLongArrowAltDown className="text-lg" />
+                  <p className="font-bold text-lg">Açaí</p>
+                </button>
+              </div>
+            </motion.div>
+
+            {/* About Us Section */}
+            <motion.div
+              id="about-us"
+              className="text-center"
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.3 }}
+              viewport={{ once: true }}
+            >
+              <h3 className="text-3xl md:text-4xl font-bold text-black mb-8">
+                ABOUT US
+              </h3>
+              <p className="text-lg text-gray-700 max-w-4xl mx-auto leading-relaxed">
+                We don't have some sappy story about starting this business 100
+                years ago on our great-grandparents' farm — but collectively,
+                we've got 100+ years of ice cream experience. From owning
+                factories to running some of the most well-known brands in the
+                business, we've got stories worth scooping.
+              </p>
+            </motion.div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 };
