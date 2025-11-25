@@ -24,10 +24,11 @@ const PageContent = () => {
   };
 
   const heroImages = [
+        `${process.env.PUBLIC_URL}/Images/Hero_Images/image3.png`,
+
     `${process.env.PUBLIC_URL}/Images/Hero_Images/image1.png`,
     `${process.env.PUBLIC_URL}/Images/Hero_Images/image2.png`,
 
-    `${process.env.PUBLIC_URL}/Images/Hero_Images/image3.png`,
   ];
 
   const gelatoFlavors = [
@@ -216,11 +217,11 @@ const PageContent = () => {
                     backgroundImage: `url(${imageUrl})`,
                   }}
                 /> */}
-                <img 
-            src={imageUrl}
-            alt={`Hero image ${index + 1}`}
-            className="w-full h-full object-fill"
-          />
+                <img
+                  src={imageUrl}
+                  alt={`Hero ${index + 1}`}
+                  className="w-full h-full object-cover"
+                />
               </SwiperSlide>
             ))}
           </Swiper>
