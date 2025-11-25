@@ -249,13 +249,13 @@ const Footer = () => {
       <div className="bg-black py-12">
         <div className="container mx-auto px-6 text-center">
           <motion.p 
-            className="text-white font-light text-3xl tracking-wide"
+            className="text-white text-3xl tracking-wide"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            Devoted: Ending dessert FOMO for good
+            Ending dessert FOMO for Good
           </motion.p>
         </div>
       </div>
