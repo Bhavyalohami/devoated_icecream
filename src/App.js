@@ -252,9 +252,21 @@ const PageContent = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.6 }}
           >
-            <button className="bg-white text-black px-8 py-4 rounded-full font-bold text-lg hover:bg-[#FF29A3] hover:text-white transition-all duration-300 transform hover:scale-105 border-2 border-transparent">
-              Get In Touch
-            </button>
+            <a href="mailto:devoatedicecreams@gmail.com">
+  <button className="bg-white text-black px-8 py-4 rounded-full font-bold text-lg hover:bg-[#FF29A3] hover:text-white transition-all duration-300 transform hover:scale-105 border-2 border-transparent">
+    Get In Touch
+  </button>
+</a>
+{/* <a
+  href="https://mail.google.com/mail/?view=cm&fs=1&to=devoatedicecreams@gmail.com"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  <button className="bg-white text-black px-8 py-4 rounded-full font-bold text-lg hover:bg-[#FF29A3] hover:text-white transition-all duration-300 transform hover:scale-105 border-2 border-transparent">
+    Get In Touch
+  </button>
+</a> */}
+
           </motion.div>
         </div>
       </section>
@@ -754,9 +766,14 @@ const PageContent = () => {
 
               {/* Buttons */}
               <div className="flex flex-col gap-10 items-center justify-center mb-12">
+                <a
+                  href="mailto:dan@getdevoated.com"
+                  // className="bg-[#FF29A3] text-white w-fit px-8 py-4 rounded-full font-bold text-lg transition-all duration-300 transform hover:scale-105 border-2 border-transparent"
+                >
                 <button className="bg-[#FF29A3] text-white w-fit px-8 py-4 rounded-full font-bold text-lg transition-all duration-300 transform hover:scale-105 border-2 border-transparent">
                   Get in Touch
                 </button>
+                </a>
                 <p className=" text-[#FF29A3] px-8 py-4 rounded-full tracking-wide font-bold text-4xl ">
                   DOWNLOAD NUTRITIONAL INGREDIENTS
                 </p>
