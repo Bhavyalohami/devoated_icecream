@@ -70,25 +70,25 @@ const PageContent = () => {
     {
       name: "Mango Coconut",
       description:
-        "Creamy coconut milk meets tangy sweet mango in this tango of flavors",
+        "Creamy coconut meets tangy sweet mango in this tango of flavors",
       category: "Fruity",
       image: `${process.env.PUBLIC_URL}/Images/Flavors/scoop-shop_19.jpg`,
     },
     {
       name: "Black Raspberry Chocolate Chunk",
-      description: "Vine ripe, purple berries and chocolate. A classic",
+      description: "Vine ripe, purple berries and chocolate.<br /> A classic",
       category: "Fruity",
       image: `${process.env.PUBLIC_URL}/Images/Flavors/scoop-shop_25.jpg`,
     },
     {
       name: "Vanilla Raspberry Fudge Crunch",
       description:
-        "Bright raspberry-kissed vanilla with chocolate cookies and decadent fudge ribbons",
+        "Bright raspberry-kissed vanilla with chocolate cookies and luscious fudge ribbons",
       category: "Fruity",
       image: `${process.env.PUBLIC_URL}/Images/Flavors/scoop-shop_22.jpg`,
     },
     {
-      name: "Black Forest - Chocolate Cherry",
+      name: "Black Forest Black Cherry",
       description:
         "Decadent chocolate with ripe black cherries and chewy brownie pieces",
       category: "Chocolate",
@@ -97,7 +97,7 @@ const PageContent = () => {
     {
       name: "Cinnamon Cookie Crunch",
       description:
-        "Velvety vanilla cream with cinnamon spice and crisp vanilla cookie chunks",
+        "Velvety vanilla with cinnamon spice and crisp vanilla cookie chunks",
       category: "Seasonal",
       image: `${process.env.PUBLIC_URL}/Images/Flavors/scoop-shop_34.jpg`,
     },
@@ -111,7 +111,7 @@ const PageContent = () => {
     {
       name: "Chocolate Peanut Butter",
       description:
-        "Dark chocolate swirled with fat ribbons of creamy peanut butter",
+        "Dark chocolate laced with fat ribbons of creamy peanut butter",
       category: "Chocolate",
       image: `${process.env.PUBLIC_URL}/Images/Flavors/scoop-shop_39.jpg`,
     },
@@ -244,7 +244,7 @@ const PageContent = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.3 }}
           >
-            Your one-stop shop for non-dairy indulgence: gelato, sorbet,
+            Your one-stop shop for non-dairy indulgence: ice cream, sorbet,
             soft-serve mixes, and açaí bowls
           </motion.p>
           <motion.div
@@ -312,7 +312,7 @@ const PageContent = () => {
       </section>
 
       {/* Flavors Section with Background Image */}
-      <section id="hard-pack gelato" className="py-20 relative min-h-screen">
+      <section id="scooping-ice cream" className="py-20 relative min-h-screen scroll-mt-20">
         {/* Background Image */}
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
@@ -405,7 +405,7 @@ const PageContent = () => {
       </section>
 
       {/* Sorbets Section */}
-      <section id="sorbet" className="py-20 relative min-h-screen mt-24">
+      <section id="sorbet" className="py-20 relative min-h-screen mt-24 scroll-mt-20">
         {/* Background Image */}
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
@@ -478,7 +478,7 @@ const PageContent = () => {
         </div>
       </section>
 
-      <section id="soft-serve" className="py-20 relative min-h-[550px] mt-24">
+      <section id="soft-serve" className="py-20 relative min-h-[550px] mt-24 scroll-mt-20">
         {/* Background Image */}
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
@@ -513,9 +513,8 @@ const PageContent = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, delay: 0.3 }}
             >
-              Most dairy free soft-serve doesn't hit it. ours does. It’s creamy,
-              rich, and straight-up fire, with the perfect dairy-like melt and
-              swirl.
+              Most dairy free soft-serve doesn't hit it, Ours Does.<br /> It’s creamy,
+              rich, and straight-up fire.
             </motion.p>
             <motion.p
               className="text-xl mb-8 text-center leading-relaxed  text-gray-200 max-w-[45rem] mx-auto"
@@ -540,7 +539,7 @@ const PageContent = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, delay: 0.3 }}
             >
-              Runs on Taylor, Stoelting, ElectroFreeze, and other machines –
+              Runs on Taylor, ElectroFreeze, and other machines –
               Performance not hindered by added pasteurization cycles within
               machine – Shelf Life: 365days frozen; use within 14 days after
               thawing. 2/2.5 gallon tubs
@@ -549,7 +548,7 @@ const PageContent = () => {
         </div>
       </section>
 
-      <section id="açaí" className="py-20 relative min-h-[450px] mt-24">
+      <section id="açaí" className="py-20 relative min-h-[450px] mt-24 scroll-mt-20">
         {/* Background Image */}
         <div
           className="absolute inset-0 bg-cover w-full bg-center bg-no-repeat"
@@ -558,7 +557,7 @@ const PageContent = () => {
           }}
         >
           {/* Overlay for better readability */}
-          <div className="absolute inset-0 bg-white/10"></div>
+          <div className="absolute inset-0 bg-white/5"></div>
         </div>
 
         {/* Content */}
@@ -736,7 +735,7 @@ const PageContent = () => {
             {/* Main Heading */}
             <motion.div
               id="ingredients"
-              className="text-center mb-12"
+              className="text-center mb-12 scroll-mt-36"
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}

@@ -85,7 +85,7 @@ const Header = () => {
             className={`hidden lg:flex items-center w-full justify-end ${isScrolled ? 'space-x-8' : 'space-x-4'}`}
             variants={containerVariants}
           >
-            {[ 'Hard Pack Gelato', 'Sorbet', 'Soft Serve', 'Açaí', 'Ingredients', 'About Us' ].map((item) => (
+            {[ 'Scooping Ice Cream', 'Sorbet', 'Soft Serve', 'Açaí', 'Ingredients', 'About Us' ].map((item) => (
               <motion.a
                 key={item}
                 href={`#${item.toLowerCase().replace(' ', '-')}`}
@@ -151,7 +151,7 @@ const Header = () => {
           variants={mobileMenuVariants}
         >
           <div className="py-6 space-y-4">
-            {[ 'Hard Pack Gelato', 'Sorbet', 'Soft Serve', 'Açaí', 'Ingredients', 'About Us' ].map((item) => (
+            {[ 'Scooping Ice Cream', 'Sorbet', 'Soft Serve', 'Açaí', 'Ingredients', 'About Us' ].map((item) => (
               <motion.a
                 key={item}
                 href={`#${item.toLowerCase().replace(' ', '-')}`}
