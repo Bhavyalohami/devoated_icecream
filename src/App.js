@@ -1,14 +1,32 @@
 import React from "react";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence  } from "framer-motion";
 import Header from "./Components/header";
 import Footer from "./Components/footer";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, EffectFade } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/effect-fade";
-import { FaFileDownload, FaLongArrowAltDown } from "react-icons/fa";
+import { FaFileDownload, FaLongArrowAltDown, FaPhone, FaEnvelope, FaTimes } from "react-icons/fa";
 
 const PageContent = () => {
+  const [isContactModalOpen, setIsContactModalOpen] = React.useState(false);
+    // Keyboard event for closing modal with Escape key
+  React.useEffect(() => {
+    const handleEscape = (e) => {
+      if (e.key === 'Escape') setIsContactModalOpen(false);
+    };
+    
+    if (isContactModalOpen) {
+      document.addEventListener('keydown', handleEscape);
+      // Prevent scrolling when modal is open
+      document.body.style.overflow = 'hidden';
+    }
+    
+    return () => {
+      document.removeEventListener('keydown', handleEscape);
+      document.body.style.overflow = 'auto';
+    };
+  }, [isContactModalOpen]);
   const getCategoryColor = (category) => {
     const colors = {
       Signature: "bg-[#FF29A3] text-white",
@@ -76,7 +94,7 @@ const PageContent = () => {
     },
     {
       name: "Black Raspberry Chocolate Chunk",
-      description: "Vine ripe, purple berries and chocolate.<br /> A classic",
+      description: "Vine ripe, purple berries and chocolate.<br /> A classic.",
       category: "Fruity",
       image: `${process.env.PUBLIC_URL}/Images/Flavors/scoop-shop_25.jpg`,
     },
@@ -193,6 +211,114 @@ const PageContent = () => {
     },
   ];
 
+  const SafeHTML = ({ html, className = "" }) => (
+  <p 
+    className={className}
+    dangerouslySetInnerHTML={{ __html: html }}
+  />
+);
+
+const ContactModal = () => (
+    <AnimatePresence>
+      {isContactModalOpen && (
+        <>
+          {/* Backdrop */}
+          <motion.div
+            className="fixed inset-0 bg-black/70 z-50 flex items-center justify-center p-4"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            onClick={() => setIsContactModalOpen(false)}
+          >
+            {/* Modal Content */}
+            <motion.div
+              className="bg-white rounded-2xl max-w-md w-full overflow-hidden"
+              initial={{ scale: 0.9, opacity: 0, y: 20 }}
+              animate={{ scale: 1, opacity: 1, y: 0 }}
+              exit={{ scale: 0.9, opacity: 0, y: 20 }}
+              transition={{ type: "spring", damping: 25 }}
+              onClick={(e) => e.stopPropagation()}
+            >
+              {/* Modal Header */}
+              <div className="bg-gradient-to-r from-[#FF29A3] to-pink-500 p-6 text-white">
+                <div className="flex justify-between items-center">
+                  <h3 className="text-2xl font-bold">Get In Touch</h3>
+                  <button
+                    onClick={() => setIsContactModalOpen(false)}
+                    className="p-2 hover:bg-white/20 rounded-full transition-colors"
+                  >
+                    <FaTimes className="text-xl" />
+                  </button>
+                </div>
+                <p className="mt-2 text-white/90">Contact Dan Stevens, VP of Sales</p>
+              </div>
+
+              {/* Modal Body */}
+              <div className="p-6">
+                <div className="space-y-4">
+                  {/* Call Button */}
+                  <a
+                    href="tel:7189875819"
+                    className="flex items-center justify-between p-4 bg-gray-50 hover:bg-gray-100 rounded-xl border border-gray-200 transition-all duration-300 group"
+                  >
+                    <div className="flex items-center space-x-4">
+                      <div className="bg-[#FF29A3] text-white p-3 rounded-full">
+                        <FaPhone className="text-lg" />
+                      </div>
+                      <div className="text-left">
+                        <p className="font-semibold text-gray-800">Call Us</p>
+                        <p className="text-[#FF29A3] font-bold text-lg">(718) 987-5819</p>
+                      </div>
+                    </div>
+                    <div className="text-gray-400 group-hover:text-[#FF29A3] transition-colors">
+                      <FaPhone className="text-sm" />
+                    </div>
+                  </a>
+
+                  {/* Email Button */}
+                  <a
+                    href="mailto:dan@getdevoated.com"
+                    className="flex items-center justify-between p-4 bg-gray-50 hover:bg-gray-100 rounded-xl border border-gray-200 transition-all duration-300 group"
+                  >
+                    <div className="flex items-center space-x-4">
+                      <div className="bg-black text-white p-3 rounded-full">
+                        <FaEnvelope className="text-lg" />
+                      </div>
+                      <div className="text-left">
+                        <p className="font-semibold text-gray-800">Email Us</p>
+                        <p className="text-black font-bold text-lg">dan@getdevoated.com</p>
+                      </div>
+                    </div>
+                    <div className="text-gray-400 group-hover:text-black transition-colors">
+                      <FaEnvelope className="text-sm" />
+                    </div>
+                  </a>
+                </div>
+
+                {/* Additional Info */}
+                <div className="mt-6 pt-6 border-t border-gray-200">
+                  <p className="text-gray-600 text-center text-sm">
+                    We'll get back to you within 24 hours
+                  </p>
+                </div>
+              </div>
+
+              {/* Modal Footer */}
+              {/* <div className="bg-gray-50 p-4 border-t border-gray-200">
+                <button
+                  onClick={() => setIsContactModalOpen(false)}
+                  className="w-full py-3 bg-gray-200 text-gray-800 font-semibold rounded-lg hover:bg-gray-300 transition-colors"
+                >
+                  Close
+                </button>
+              </div> */}
+            </motion.div>
+          </motion.div>
+        </>
+      )}
+    </AnimatePresence>
+  );
+
   return (
     <div className="min-h-screen overflow-x-hidden">
       {/* Hero Section */}
@@ -252,11 +378,11 @@ const PageContent = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.6 }}
           >
-            <a href="mailto:devoatedicecreams@gmail.com">
-  <button className="bg-white text-black px-8 py-4 rounded-full font-bold text-lg hover:bg-[#FF29A3] hover:text-white transition-all duration-300 transform hover:scale-105 border-2 border-transparent">
+            {/* <a href="mailto:devoatedicecreams@gmail.com"> */}
+  <button onClick={() => setIsContactModalOpen(true)} className="bg-white text-black px-8 py-4 rounded-full font-bold text-lg hover:bg-[#FF29A3] hover:text-white transition-all duration-300 transform hover:scale-105 border-2 border-transparent">
     Get In Touch
   </button>
-</a>
+{/* </a> */}
 {/* <a
   href="https://mail.google.com/mail/?view=cm&fs=1&to=devoatedicecreams@gmail.com"
   target="_blank"
@@ -376,9 +502,10 @@ const PageContent = () => {
                   <h3 className="text-xl font-bold text-white mb-3 leading-tight text-center">
                     {flavor.name}
                   </h3>
-                  <p className=" text-sm leading-relaxed text-center text-white">
-                    {flavor.description}
-                  </p>
+                  <SafeHTML 
+        html={flavor.description}
+        className="text-sm leading-relaxed text-center text-white"
+      />
                 </div>
               </motion.div>
             ))}
@@ -765,14 +892,14 @@ const PageContent = () => {
 
               {/* Buttons */}
               <div className="flex flex-col gap-10 items-center justify-center mb-12">
-                <a
+                {/* <a
                   href="mailto:dan@getdevoated.com"
                   // className="bg-[#FF29A3] text-white w-fit px-8 py-4 rounded-full font-bold text-lg transition-all duration-300 transform hover:scale-105 border-2 border-transparent"
-                >
-                <button className="bg-[#FF29A3] text-white w-fit px-8 py-4 rounded-full font-bold text-lg transition-all duration-300 transform hover:scale-105 border-2 border-transparent">
+                > */}
+                <button onClick={() => setIsContactModalOpen(true)} className="bg-[#FF29A3] text-white w-fit px-8 py-4 rounded-full font-bold text-lg transition-all duration-300 transform hover:scale-105 border-2 border-transparent">
                   Get in Touch
                 </button>
-                </a>
+                {/* </a> */}
                 <p className=" text-[#FF29A3] px-8 py-4 rounded-full tracking-wide font-bold text-4xl ">
                   DOWNLOAD NUTRITIONAL INGREDIENTS
                 </p>
@@ -818,6 +945,7 @@ const PageContent = () => {
           </div>
         </div>
       </section>
+      <ContactModal />
     </div>
   );
 };
