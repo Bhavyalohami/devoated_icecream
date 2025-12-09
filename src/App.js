@@ -42,7 +42,7 @@ const PageContent = () => {
     {
       name: "Mint Fudge Cookie Crunch",
       description:
-        "Fudge swirled green mint with hunks of chocolatey mint cookies",
+        "Fudge swirled green mint with chunks of chocolatey cookies",
       category: "Mint",
       image: `${process.env.PUBLIC_URL}/Images/Flavors/scoop-shop_05.jpg`,
     },
