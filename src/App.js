@@ -680,11 +680,11 @@ const ContactModal = () => (
         <div
           className="absolute inset-0 bg-cover w-full bg-center bg-no-repeat"
           style={{
-            backgroundImage: `url(${process.env.PUBLIC_URL}/Images/Acai-Bowl/acai-and-smoothies-background_08.jpg)`,
+            backgroundImage: `url(${process.env.PUBLIC_URL}/Images/Acai-Bowl/acai-background_02.jpg)`,
           }}
         >
           {/* Overlay for better readability */}
-          <div className="absolute inset-0 bg-white/5"></div>
+          <div className="absolute inset-0 bg-black/15"></div>
         </div>
 
         {/* Content */}
