@@ -1024,7 +1024,7 @@ const ScrollToTopOnRouteChange = () => {
 
 function App() {
   return (
-    <Router basename="/devaoted_ice_cream">
+    <Router basename="/devoated_ice_cream">
       <Header />
       <div className="min-h-screen overflow-x-hidden">
         {/* This component handles scrolling to top on route change */}
