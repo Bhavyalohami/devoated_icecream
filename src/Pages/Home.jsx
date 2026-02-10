@@ -675,7 +675,7 @@ const ContactModal = () => (
               Runs on Taylor, ElectroFreeze, and other machines –
               Performance not hindered by added pasteurization cycles within
               machine – Shelf Life: 365days frozen; use within 14 days after
-              thawing. 2/2.5 gallon tubs
+              thawing. 2/2.5 gallon bags
             </motion.p>
           </div>
         </div>

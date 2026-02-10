@@ -1010,6 +1010,15 @@ import VanillaBourbonBrownie from "./Pages/Flavourpages/VanillaBourbonBrownie";
 import MintFudgeCookieCrunch from "./Pages/Flavourpages/MintFudgeCookieCrunch";
 import SaltedMaltedCaramel from "./Pages/Flavourpages/SaltedMaltedCaramel";
 import ScrollToTop from "./Components/scrolltotop";
+import ChocolateOverload from "./Pages/Flavourpages/ChocolateOverload";
+import CoffeeAffogatoCaramelSwirl from "./Pages/Flavourpages/CoffeeAffogatoCaramelSwirl";
+import MangoCoconut from "./Pages/Flavourpages/MangoCoconut";
+import BlackRaspberryChocolateChunk from "./Pages/Flavourpages/BlackRaspberryChocolateChunk";
+import VanillaRaspberryFudgeCrunch from "./Pages/Flavourpages/VanillaRaspberryFudgeCrunch";
+import BlackForestBlackCherry from "./Pages/Flavourpages/BlackForestBalckCherry";
+import CinnamonCookieCrunch from "./Pages/Flavourpages/CinnamonCookieCrunch";
+import BananaPudding from "./Pages/Flavourpages/BananaPudding";
+import ChocolatePeanutButter from "./Pages/Flavourpages/ChocolatePeanutButter";
 
 // Component to scroll to top on route change
 const ScrollToTopOnRouteChange = () => {
@@ -1035,6 +1044,15 @@ function App() {
           <Route path="/flavor/vanilla-bourbon-brownie" element={<VanillaBourbonBrownie />} />
           <Route path="/flavor/mint-fudge-cookie-crunch" element={<MintFudgeCookieCrunch />} />
           <Route path="/flavor/salted-malted-caramel" element={<SaltedMaltedCaramel />} />
+          <Route path="/flavor/chocolate-overload" element={<ChocolateOverload />} />
+          <Route path="/flavor/coffee-affogato-caramel-swirl" element={<CoffeeAffogatoCaramelSwirl />} />
+          <Route path="/flavor/mango-coconut" element={<MangoCoconut />} />
+          <Route path="/flavor/black-raspberry-chocolate-chunk" element={<BlackRaspberryChocolateChunk />} />
+          <Route path="/flavor/vanilla-raspberry-fudge-crunch" element={<VanillaRaspberryFudgeCrunch />} />
+          <Route path="/flavor/black-forest-black-cherry" element={<BlackForestBlackCherry />} />
+          <Route path="/flavor/cinnamon-cookie-crunch" element={<CinnamonCookieCrunch/>}/>
+          <Route path="/flavor/banana-pudding" element={<BananaPudding/>}/>
+          <Route path="/flavor/chocolate-peanut-butter" element={<ChocolatePeanutButter/>}/>
         </Routes>
         
         {/* Scroll to top button */}
