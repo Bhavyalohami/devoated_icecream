@@ -1019,6 +1019,7 @@ import BlackForestBlackCherry from "./Pages/Flavourpages/BlackForestBalckCherry"
 import CinnamonCookieCrunch from "./Pages/Flavourpages/CinnamonCookieCrunch";
 import BananaPudding from "./Pages/Flavourpages/BananaPudding";
 import ChocolatePeanutButter from "./Pages/Flavourpages/ChocolatePeanutButter";
+import CookieButter from "./Pages/Flavourpages/CookieButter";
 
 // Component to scroll to top on route change
 const ScrollToTopOnRouteChange = () => {
@@ -1053,6 +1054,7 @@ function App() {
           <Route path="/flavor/cinnamon-cookie-crunch" element={<CinnamonCookieCrunch/>}/>
           <Route path="/flavor/banana-pudding" element={<BananaPudding/>}/>
           <Route path="/flavor/chocolate-peanut-butter" element={<ChocolatePeanutButter/>}/>
+          <Route path="/flavor/cookie-butter" element={<CookieButter />} />
         </Routes>
         
         {/* Scroll to top button */}

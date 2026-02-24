@@ -60,8 +60,7 @@ const Home = () => {
     },
     {
       name: "Mint Fudge Cookie Crunch",
-      description:
-        "Fudge swirled green mint with chunks of chocolatey cookies",
+      description: "Fudge swirled green mint with chunks of chocolatey cookies",
       category: "Mint",
       image: `${process.env.PUBLIC_URL}/Images/Flavors/scoop-shop_05.jpg`,
     },
@@ -127,12 +126,19 @@ const Home = () => {
       category: "Classic",
       image: `${process.env.PUBLIC_URL}/Images/Flavors/scoop-shop_36.jpg`,
     },
+    // {
+    //   name: "Chocolate Peanut Butter",
+    //   description:
+    //     "Dark chocolate laced with fat ribbons of creamy peanut butter",
+    //   category: "Chocolate",
+    //   image: `${process.env.PUBLIC_URL}/Images/Flavors/scoop-shop_39.jpg`,
+    // },
     {
-      name: "Chocolate Peanut Butter",
+      name: "Cookie Butter",
       description:
-        "Dark chocolate laced with fat ribbons of creamy peanut butter",
-      category: "Chocolate",
-      image: `${process.env.PUBLIC_URL}/Images/Flavors/scoop-shop_39.jpg`,
+        "Silky spiced cookie butter folded into sweet cream with swirls of caramelized biscuit goodness",
+      category: "Classic",
+      image: `${process.env.PUBLIC_URL}/Images/Flavors/scoop-shop_40.jpg`,
     },
   ];
 
@@ -696,9 +702,9 @@ const ContactModal = () => (
         {/* Content */}
         <div className="container mx-auto px-6 relative z-10">
           {/* Sorbets Header */}
-          <div className="text-center mb-12">
+          <div className="w-full flex items-center justify-center text-center mb-12">
             <motion.h2
-              className="text-4xl md:text-5xl font-bold text-[#FF29A3] mb-4"
+              className="text-4xl md:text-5xl font-bold text-[#FF29A3] mb-4 bg-white/40 w-fit px-4 pb-1.5 rounded-full"
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
