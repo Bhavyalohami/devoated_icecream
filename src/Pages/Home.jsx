@@ -98,12 +98,19 @@ const Home = () => {
       category: "Fruity",
       image: `${process.env.PUBLIC_URL}/Images/Flavors/scoop-shop_25.jpg`,
     },
+    // {
+    //   name: "Vanilla Raspberry Fudge Crunch",
+    //   description:
+    //     "Bright raspberry-kissed vanilla with chocolate cookies and luscious fudge ribbons",
+    //   category: "Fruity",
+    //   image: `${process.env.PUBLIC_URL}/Images/Flavors/scoop-shop_22.jpg`,
+    // },
     {
-      name: "Vanilla Raspberry Fudge Crunch",
+      name: "Cherry Vanilla",
       description:
-        "Bright raspberry-kissed vanilla with chocolate cookies and luscious fudge ribbons",
+        "Classic creamy vanilla swirled with juicy cherry ribbons and delightful cherry chunks in every bite",
       category: "Fruity",
-      image: `${process.env.PUBLIC_URL}/Images/Flavors/scoop-shop_22.jpg`,
+      image: `${process.env.PUBLIC_URL}/Images/Flavors/scoop-shop_41.png`,
     },
     {
       name: "Black Forest Black Cherry",
