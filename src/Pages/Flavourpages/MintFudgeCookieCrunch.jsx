@@ -25,96 +25,196 @@ const MintFudgeCookieCrunch = () => {
     };
   }, [isContactModalOpen]);
 
+  // const ContactModal = () => (
+  //   <AnimatePresence>
+  //     {isContactModalOpen && (
+  //       <>
+  //         {/* Backdrop */}
+  //         <motion.div
+  //           className="fixed inset-0 bg-black/70 z-50 flex items-center justify-center p-4"
+  //           initial={{ opacity: 0 }}
+  //           animate={{ opacity: 1 }}
+  //           exit={{ opacity: 0 }}
+  //           onClick={() => setIsContactModalOpen(false)}
+  //         >
+  //           {/* Modal Content */}
+  //           <motion.div
+  //             className="bg-white rounded-2xl max-w-md w-full overflow-hidden"
+  //             initial={{ scale: 0.9, opacity: 0, y: 20 }}
+  //             animate={{ scale: 1, opacity: 1, y: 0 }}
+  //             exit={{ scale: 0.9, opacity: 0, y: 20 }}
+  //             transition={{ type: "spring", damping: 25 }}
+  //             onClick={(e) => e.stopPropagation()}
+  //           >
+  //             {/* Modal Header */}
+  //             <div className="bg-gradient-to-r from-[#FF29A3] to-pink-500 p-6 text-white">
+  //               <div className="flex justify-between items-center">
+  //                 <h3 className="text-2xl font-bold">Get In Touch</h3>
+  //                 <button
+  //                   onClick={() => setIsContactModalOpen(false)}
+  //                   className="p-2 hover:bg-white/20 rounded-full transition-colors"
+  //                 >
+  //                   <FaTimes className="text-xl" />
+  //                 </button>
+  //               </div>
+  //               <p className="mt-2 text-white/90">Contact Dan Stevens, VP of Sales</p>
+  //             </div>
+
+  //             {/* Modal Body */}
+  //             <div className="p-6">
+  //               <div className="space-y-4">
+  //                 {/* Call Button */}
+  //                 <a
+  //                   href="tel:7189875819"
+  //                   className="flex items-center justify-between p-4 bg-gray-50 hover:bg-gray-100 rounded-xl border border-gray-200 transition-all duration-300 group"
+  //                 >
+  //                   <div className="flex items-center space-x-4">
+  //                     <div className="bg-[#FF29A3] text-white p-3 rounded-full">
+  //                       <FaPhone className="text-lg" />
+  //                     </div>
+  //                     <div className="text-left">
+  //                       <p className="font-semibold text-gray-800">Call Us</p>
+  //                       <p className="text-[#FF29A3] font-bold text-lg">(718) 987-5819</p>
+  //                     </div>
+  //                   </div>
+  //                   <div className="text-gray-400 group-hover:text-[#FF29A3] transition-colors">
+  //                     <FaPhone className="text-sm" />
+  //                   </div>
+  //                 </a>
+
+  //                 {/* Email Button */}
+  //                 <a
+  //                   href="mailto:dan@getdevoated.com"
+  //                   className="flex items-center justify-between p-4 bg-gray-50 hover:bg-gray-100 rounded-xl border border-gray-200 transition-all duration-300 group"
+  //                 >
+  //                   <div className="flex items-center space-x-4">
+  //                     <div className="bg-black text-white p-3 rounded-full">
+  //                       <FaEnvelope className="text-lg" />
+  //                     </div>
+  //                     <div className="text-left">
+  //                       <p className="font-semibold text-gray-800">Email Us</p>
+  //                       <p className="text-black font-bold text-lg">dan@getdevoated.com</p>
+  //                     </div>
+  //                   </div>
+  //                   <div className="text-gray-400 group-hover:text-black transition-colors">
+  //                     <FaEnvelope className="text-sm" />
+  //                   </div>
+  //                 </a>
+  //               </div>
+
+  //               <div className="mt-6 pt-6 border-t border-gray-200">
+  //                 <p className="text-gray-600 text-center text-sm">
+  //                   We'll get back to you within 24 hours
+  //                 </p>
+  //               </div>
+  //             </div>
+  //           </motion.div>
+  //         </motion.div>
+  //       </>
+  //     )}
+  //   </AnimatePresence>
+  // );
+
   const ContactModal = () => (
-    <AnimatePresence>
-      {isContactModalOpen && (
-        <>
-          {/* Backdrop */}
-          <motion.div
-            className="fixed inset-0 bg-black/70 z-50 flex items-center justify-center p-4"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            onClick={() => setIsContactModalOpen(false)}
-          >
-            {/* Modal Content */}
+      <AnimatePresence>
+        {isContactModalOpen && (
+          <>
+            {/* Backdrop */}
             <motion.div
-              className="bg-white rounded-2xl max-w-md w-full overflow-hidden"
-              initial={{ scale: 0.9, opacity: 0, y: 20 }}
-              animate={{ scale: 1, opacity: 1, y: 0 }}
-              exit={{ scale: 0.9, opacity: 0, y: 20 }}
-              transition={{ type: "spring", damping: 25 }}
-              onClick={(e) => e.stopPropagation()}
+              className="fixed inset-0 bg-black/70 z-50 flex items-center justify-center p-4"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              onClick={() => setIsContactModalOpen(false)}
             >
-              {/* Modal Header */}
-              <div className="bg-gradient-to-r from-[#FF29A3] to-pink-500 p-6 text-white">
-                <div className="flex justify-between items-center">
-                  <h3 className="text-2xl font-bold">Get In Touch</h3>
+              {/* Modal Content */}
+              <motion.div
+                className="bg-white rounded-2xl max-w-md w-full overflow-hidden"
+                initial={{ scale: 0.9, opacity: 0, y: 20 }}
+                animate={{ scale: 1, opacity: 1, y: 0 }}
+                exit={{ scale: 0.9, opacity: 0, y: 20 }}
+                transition={{ type: "spring", damping: 25 }}
+                onClick={(e) => e.stopPropagation()}
+              >
+                {/* Modal Header */}
+                <div className="bg-gradient-to-r from-[#FF29A3] to-pink-500 p-6 text-white">
+                  <div className="flex justify-between items-center">
+                    <h3 className="text-2xl font-bold">Get In Touch</h3>
+                    <button
+                      onClick={() => setIsContactModalOpen(false)}
+                      className="p-2 hover:bg-white/20 rounded-full transition-colors"
+                    >
+                      <FaTimes className="text-xl" />
+                    </button>
+                  </div>
+                  {/* <p className="mt-2 text-white/90">Contact Dan Stevens, VP of Sales</p> */}
+                </div>
+  
+                {/* Modal Body */}
+                <div className="p-6">
+                  <div className="space-y-4">
+                    {/* Call Button */}
+                    <a
+                      href="tel:7183546990"
+                      className="flex items-center justify-between p-4 bg-gray-50 hover:bg-gray-100 rounded-xl border border-gray-200 transition-all duration-300 group"
+                    >
+                      <div className="flex items-center space-x-4">
+                        <div className="bg-[#FF29A3] text-white p-3 rounded-full">
+                          <FaPhone className="text-lg" />
+                        </div>
+                        <div className="text-left">
+                          <p className="font-semibold text-gray-800">Call Us</p>
+                          <p className="text-[#FF29A3] font-bold text-lg"> (718) 354-6990</p>
+                        </div>
+                      </div>
+                      <div className="text-gray-400 group-hover:text-[#FF29A3] transition-colors">
+                        <FaPhone className="text-sm" />
+                      </div>
+                    </a>
+  
+                    {/* Email Button */}
+                    {/* <a
+                      href="mailto:dan@getdevoated.com"
+                      className="flex items-center justify-between p-4 bg-gray-50 hover:bg-gray-100 rounded-xl border border-gray-200 transition-all duration-300 group"
+                    >
+                      <div className="flex items-center space-x-4">
+                        <div className="bg-black text-white p-3 rounded-full">
+                          <FaEnvelope className="text-lg" />
+                        </div>
+                        <div className="text-left">
+                          <p className="font-semibold text-gray-800">Email Us</p>
+                          <p className="text-black font-bold text-lg">dan@getdevoated.com</p>
+                        </div>
+                      </div>
+                      <div className="text-gray-400 group-hover:text-black transition-colors">
+                        <FaEnvelope className="text-sm" />
+                      </div>
+                    </a> */}
+                  </div>
+  
+                  {/* Additional Info */}
+                  <div className="mt-6 pt-6 border-t border-gray-200">
+                    <p className="text-gray-600 text-center text-sm">
+                      We'll get back to you within 24 hours
+                    </p>
+                  </div>
+                </div>
+  
+                {/* Modal Footer */}
+                {/* <div className="bg-gray-50 p-4 border-t border-gray-200">
                   <button
                     onClick={() => setIsContactModalOpen(false)}
-                    className="p-2 hover:bg-white/20 rounded-full transition-colors"
+                    className="w-full py-3 bg-gray-200 text-gray-800 font-semibold rounded-lg hover:bg-gray-300 transition-colors"
                   >
-                    <FaTimes className="text-xl" />
+                    Close
                   </button>
-                </div>
-                <p className="mt-2 text-white/90">Contact Dan Stevens, VP of Sales</p>
-              </div>
-
-              {/* Modal Body */}
-              <div className="p-6">
-                <div className="space-y-4">
-                  {/* Call Button */}
-                  <a
-                    href="tel:7189875819"
-                    className="flex items-center justify-between p-4 bg-gray-50 hover:bg-gray-100 rounded-xl border border-gray-200 transition-all duration-300 group"
-                  >
-                    <div className="flex items-center space-x-4">
-                      <div className="bg-[#FF29A3] text-white p-3 rounded-full">
-                        <FaPhone className="text-lg" />
-                      </div>
-                      <div className="text-left">
-                        <p className="font-semibold text-gray-800">Call Us</p>
-                        <p className="text-[#FF29A3] font-bold text-lg">(718) 987-5819</p>
-                      </div>
-                    </div>
-                    <div className="text-gray-400 group-hover:text-[#FF29A3] transition-colors">
-                      <FaPhone className="text-sm" />
-                    </div>
-                  </a>
-
-                  {/* Email Button */}
-                  <a
-                    href="mailto:dan@getdevoated.com"
-                    className="flex items-center justify-between p-4 bg-gray-50 hover:bg-gray-100 rounded-xl border border-gray-200 transition-all duration-300 group"
-                  >
-                    <div className="flex items-center space-x-4">
-                      <div className="bg-black text-white p-3 rounded-full">
-                        <FaEnvelope className="text-lg" />
-                      </div>
-                      <div className="text-left">
-                        <p className="font-semibold text-gray-800">Email Us</p>
-                        <p className="text-black font-bold text-lg">dan@getdevoated.com</p>
-                      </div>
-                    </div>
-                    <div className="text-gray-400 group-hover:text-black transition-colors">
-                      <FaEnvelope className="text-sm" />
-                    </div>
-                  </a>
-                </div>
-
-                <div className="mt-6 pt-6 border-t border-gray-200">
-                  <p className="text-gray-600 text-center text-sm">
-                    We'll get back to you within 24 hours
-                  </p>
-                </div>
-              </div>
+                </div> */}
+              </motion.div>
             </motion.div>
-          </motion.div>
-        </>
-      )}
-    </AnimatePresence>
-  );
-
+          </>
+        )}
+      </AnimatePresence>
+    );
   // Images for this flavor - 5 images total
   const flavorImages = [
     `${process.env.PUBLIC_URL}/Images/Flavors/mint-fudge-cookie-crunch/mintfudge1.jpg`,

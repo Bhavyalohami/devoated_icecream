@@ -96,7 +96,7 @@ const Home = () => {
       name: "Black Raspberry Chocolate Chunk",
       description: "Vine ripe, purple berries and chocolate.<br /> A classic.",
       category: "Fruity",
-      image: `${process.env.PUBLIC_URL}/Images/Flavors/scoop-shop_25.jpg`,
+      image: `${process.env.PUBLIC_URL}/Images/Flavors/scoop-shop_25.jpeg`,
     },
     // {
     //   name: "Vanilla Raspberry Fudge Crunch",
@@ -264,7 +264,7 @@ const ContactModal = () => (
                     <FaTimes className="text-xl" />
                   </button>
                 </div>
-                <p className="mt-2 text-white/90">Contact Dan Stevens, VP of Sales</p>
+                {/* <p className="mt-2 text-white/90">Contact Dan Stevens, VP of Sales</p> */}
               </div>
 
               {/* Modal Body */}
@@ -272,7 +272,7 @@ const ContactModal = () => (
                 <div className="space-y-4">
                   {/* Call Button */}
                   <a
-                    href="tel:7189875819"
+                    href="tel:7183546990"
                     className="flex items-center justify-between p-4 bg-gray-50 hover:bg-gray-100 rounded-xl border border-gray-200 transition-all duration-300 group"
                   >
                     <div className="flex items-center space-x-4">
@@ -281,7 +281,7 @@ const ContactModal = () => (
                       </div>
                       <div className="text-left">
                         <p className="font-semibold text-gray-800">Call Us</p>
-                        <p className="text-[#FF29A3] font-bold text-lg">(718) 987-5819</p>
+                        <p className="text-[#FF29A3] font-bold text-lg"> (718) 354-6990</p>
                       </div>
                     </div>
                     <div className="text-gray-400 group-hover:text-[#FF29A3] transition-colors">
@@ -290,7 +290,7 @@ const ContactModal = () => (
                   </a>
 
                   {/* Email Button */}
-                  <a
+                  {/* <a
                     href="mailto:dan@getdevoated.com"
                     className="flex items-center justify-between p-4 bg-gray-50 hover:bg-gray-100 rounded-xl border border-gray-200 transition-all duration-300 group"
                   >
@@ -306,7 +306,7 @@ const ContactModal = () => (
                     <div className="text-gray-400 group-hover:text-black transition-colors">
                       <FaEnvelope className="text-sm" />
                     </div>
-                  </a>
+                  </a> */}
                 </div>
 
                 {/* Additional Info */}
