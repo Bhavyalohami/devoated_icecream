@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/devoated_icecream/static/css/main.76950c9e.css",
-    "main.js": "/devoated_icecream/static/js/main.0dbbfa24.js",
+    "main.css": "/devoated_icecream/static/css/main.97019f00.css",
+    "main.js": "/devoated_icecream/static/js/main.f859e4e6.js",
     "index.html": "/devoated_icecream/index.html",
-    "main.76950c9e.css.map": "/devoated_icecream/static/css/main.76950c9e.css.map",
-    "main.0dbbfa24.js.map": "/devoated_icecream/static/js/main.0dbbfa24.js.map"
+    "main.97019f00.css.map": "/devoated_icecream/static/css/main.97019f00.css.map",
+    "main.f859e4e6.js.map": "/devoated_icecream/static/js/main.f859e4e6.js.map"
   },
   "entrypoints": [
-    "static/css/main.76950c9e.css",
-    "static/js/main.0dbbfa24.js"
+    "static/css/main.97019f00.css",
+    "static/js/main.f859e4e6.js"
   ]
 }
